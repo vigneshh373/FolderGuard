@@ -1,0 +1,20 @@
+
+# .NET build output
+**/bin/
+**/obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Compiled applications and publishing output
+/exe/
+/exe-framework-dependent/
+/publish/
+
+# Logs
+*.log
+
+# Python cache
+tools/__pycache__/

@@ -1,0 +1,47 @@
+<UserControl x:Class="FolderGuard.Views.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StackPanel>
+        <TextBlock Text="Settings" Style="{StaticResource SectionTitle}" />
+        <TextBlock Style="{StaticResource CaptionText}"
+                   TextWrapping="Wrap"
+                   Margin="0,4,0,14"
+                   Text="Configuration, permission backups and password hashes live outside the EXE, so you can move, copy or replace FolderGuard at any time." />
+
+        <TextBlock Text="DATA FOLDER" Style="{StaticResource CaptionText}" FontWeight="SemiBold" />
+        <TextBlock x:Name="DataFolderText"
+                   Style="{StaticResource CaptionText}"
+                   TextWrapping="Wrap"
+                   Margin="0,3,0,12"
+                   Text="%ProgramData%\FolderGuard" />
+
+        <TextBlock Style="{StaticResource CaptionText}"
+                   TextWrapping="Wrap"
+                   Margin="0,0,0,14"
+                   Text="Unlocked folders lock themselves again after 5 minutes without keyboard or mouse activity. Closing FolderGuard does not lock them." />
+
+        <WrapPanel>
+            <Button Content="Open data folder"
+                    Style="{StaticResource SecondaryButton}"
+                    Margin="0,0,8,8"
+                    Click="OpenDataFolder_Click" />
+            <Button Content="Reload configuration"
+                    Style="{StaticResource SecondaryButton}"
+                    Margin="0,0,8,8"
+                    Click="Reload_Click" />
+            <Button Content="Lock all now"
+                    Style="{StaticResource SecondaryButton}"
+                    Margin="0,0,8,8"
+                    Click="LockAll_Click" />
+            <Button Content="Repair permissions"
+                    Style="{StaticResource SecondaryButton}"
+                    Margin="0,0,8,8"
+                    Click="Repair_Click" />
+        </WrapPanel>
+
+        <TextBlock Style="{StaticResource CaptionText}"
+                   TextWrapping="Wrap"
+                   Margin="0,8,0,0"
+                   Text="NTFS permissions control access, they do not encrypt data. Administrators, SYSTEM processes and offline access to the drive can still reach the contents. Use BitLocker for offline protection." />
+    </StackPanel>
+</UserControl>

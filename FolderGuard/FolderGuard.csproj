@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>FolderGuard</AssemblyName>
+    <RootNamespace>FolderGuard</RootNamespace>
+    <ApplicationIcon>Resources\AppIcon.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Version>1.3.1</Version>
+    <AssemblyVersion>1.3.1.0</AssemblyVersion>
+    <FileVersion>1.3.1.0</FileVersion>
+    <Product>FolderGuard</Product>
+    <Title>FolderGuard</Title>
+    <Description>Reusable NTFS ACL based folder protection for Windows 11.</Description>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <!-- Allows building/publishing this Windows project from a non-Windows build agent. -->
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Security.Cryptography.ProtectedData" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\AppIcon.ico" />
+    <Resource Include="Resources\AppLogo.png" />
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

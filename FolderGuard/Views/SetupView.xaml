@@ -1,0 +1,37 @@
+<UserControl x:Class="FolderGuard.Views.SetupView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StackPanel>
+        <TextBlock Text="Folder to protect" Style="{StaticResource CaptionText}" />
+        <Grid Margin="0,6,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="PathBox"
+                     Style="{StaticResource ModernTextBox}"
+                     IsReadOnly="True"
+                     Text="No folder selected" />
+            <Button x:Name="BrowseButton"
+                    Grid.Column="1"
+                    Content="Browse…"
+                    Style="{StaticResource SecondaryButton}"
+                    Margin="8,0,0,0"
+                    Click="BrowseButton_Click" />
+        </Grid>
+
+        <TextBlock x:Name="HintText"
+                   Style="{StaticResource CaptionText}"
+                   TextWrapping="Wrap"
+                   Margin="0,8,0,0"
+                   Text="The folder stays visible in File Explorer. Only access to its contents is denied." />
+
+        <Button x:Name="ProtectButton"
+                Content="Protect Folder"
+                Style="{StaticResource PrimaryButton}"
+                HorizontalAlignment="Left"
+                Margin="0,14,0,0"
+                IsEnabled="False"
+                Click="ProtectButton_Click" />
+    </StackPanel>
+</UserControl>

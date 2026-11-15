@@ -6,7 +6,7 @@ FolderGuard is a Windows desktop application that lets you protect selected fold
 
 FolderGuard does **not** move, hide, rename, or encrypt your files. It changes the selected folder's Windows security permissions.
 
-> **Project status:** AI-assisted personal project, currently in early public-release/pre-release development. The developer is progressively learning, reviewing, testing, and maintaining the codebase. See [Testing status](#testing-status) and [Security limitations](#security-limitations).
+> **Project status:** AI-assisted personal project, currently in early public-release/pre-release development. I'm progressively learning, reviewing, testing, and maintaining the codebase.
 
 ## Screenshot
 
@@ -201,36 +201,6 @@ README.md
 
 The exact contents may evolve as the project is maintained. Refer to the repository's current folders and files for the authoritative structure.
 
-## Testing status
-
-The developer has manually tested the basic workflow on their Windows system:
-
-- A protected folder remains visible in File Explorer.
-- Access to the folder's contents is denied while it is locked.
-- Entering the password through FolderGuard allows access after unlocking.
-- The folder returns to a locked state after a Windows restart or shutdown/startup.
-
-The application also displays a five-minute inactivity auto-lock setting. This behaviour, along with the recovery and edge-case scenarios below, should be tested independently before being described as fully verified.
-
-### Suggested test checklist
-
-Use a disposable test folder, such as `C:\FolderGuardTest`, containing only unimportant test files.
-
-| Test | What to check | Status |
-|---|---|---|
-| Protect | Protect a new test folder and confirm its displayed state | Needs broader verification |
-| Locked access | Confirm ordinary File Explorer access to contents is denied | Developer reports tested |
-| Correct password | Unlock with the correct password | Developer reports tested |
-| Incorrect password | Confirm a wrong password does not unlock the folder | Not yet documented as verified |
-| Lock button | Lock an unlocked folder and check access again | Test on each supported Windows setup |
-| Restart | Check access after Windows restarts, before opening FolderGuard | Developer reports tested |
-| Shutdown/startup | Check access after a full shutdown and startup | Developer reports tested |
-| Change password | Confirm the old password stops working and the new one works | Not yet documented as verified |
-| Remove protection | Confirm original permissions are restored | Not yet documented as verified |
-| Recovery | Test interrupted operations and configuration backup recovery | Not yet documented as verified |
-| Idle auto-lock | Leave the computer inactive for five minutes and check the folder state | Not yet documented as verified |
-
-Update this table only when a test has actually been performed. Record the Windows version and the result when reporting compatibility.
 
 ## Security limitations
 

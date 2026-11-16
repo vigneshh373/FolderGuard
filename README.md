@@ -243,4 +243,5 @@ Please do not submit changes that claim security guarantees without reproducible
 
 ## License
 
-No license has been selected yet. Until a license is added, the repository is publicly viewable, but reuse and redistribution are not automatically granted.
+FolderGuard is licensed under the MIT License.
+See the [LICENSE](LICENSE) file for details.
